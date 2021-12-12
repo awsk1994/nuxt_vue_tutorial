@@ -57,6 +57,8 @@ const graphA = endent`
 const graphB = endent`
       graph TD
         DateTime[Date and time]
+        Frameworks((Frameworks))
+        JavaScript(Javascript)
         ${style("Frameworks", 0)}
         ${style("DateTime", 1)}
         JavaScript --> Frameworks
@@ -78,7 +80,14 @@ const graphC = endent`
          c1-->a2
 `
 
-const graphs = [graphA, graphB, graphC]
+const graphD = endent`
+graph TB;
+    A-->B;
+    click A callback "Tooltip for a callback"
+    click B "http://www.github.com" "This is a tooltip for a link"
+`
+
+const graphs = [graphA, graphB, graphC, graphD]
 
 export default {
   data() {
@@ -95,7 +104,7 @@ export default {
   methods: {
     change() {
       this.idx += 1
-      if (this.idx > this.graphs.length) {
+      if (this.idx > this.graphs.length-1) {
         this.idx = 0
       }
       this.graphData = this.graphs[this.idx]
