@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <button @click="change(); forceRerender()">Change</button>
-    <vue-mermaid-string :value="graphData" v-if="renderComponent" />
+<!--    nodeClick only works if the click X doesn't have tooltip.etc.-->
+    <vue-mermaid-string :value="graphData" @node-click="nodeClick" v-if="renderComponent" />
   </div>
 </template>
 
 <script>
+
 import VueMermaidString from "vue-mermaid-string";
 import endent from "endent";
 import tinycolor from "tinycolor2";
@@ -80,12 +82,21 @@ const graphC = endent`
          c1-->a2
 `
 
+var callback2 = function(){
+  alert('A callback was triggered');
+}
+
 const graphD = endent`
 graph TB;
     A-->B;
+    B --> C;
+    A --> D;
     click A callback "Tooltip for a callback\nabc\tok"
     click B "http://www.github.com" "This is a tooltip for a link"
+    click C callback "Tooltip"
+    click D
 `
+
 
 const graphs = [graphD, graphA, graphB, graphC]
 
@@ -113,6 +124,9 @@ export default {
     forceRerender() {
       this.renderComponent = false;
       this.$nextTick(() => this.renderComponent = true)
+    },
+    nodeClick() {
+      console.log("nodeId")
     }
   }
 };
