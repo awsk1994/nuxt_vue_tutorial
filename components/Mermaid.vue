@@ -83,11 +83,11 @@ const graphC = endent`
 const graphD = endent`
 graph TB;
     A-->B;
-    click A callback "Tooltip for a callback"
+    click A callback "Tooltip for a callback\nabc\tok"
     click B "http://www.github.com" "This is a tooltip for a link"
 `
 
-const graphs = [graphA, graphB, graphC, graphD]
+const graphs = [graphD, graphA, graphB, graphC]
 
 export default {
   data() {
@@ -127,4 +127,20 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+div.mermaidTooltip {
+  position: absolute;
+  text-align: center;
+  max-width: 200px;
+  padding: 2px;
+  margin-left: 30px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family);
+  font-size: 12px;
+  background: #73DBF9;
+  border: 1px solid black;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 100;
+}
+
 </style>
