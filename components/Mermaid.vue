@@ -64,14 +64,29 @@ const graphB = endent`
         DateTime --> 3D
     `
 
+const graphC = endent`
+ graph TB
+         subgraph one
+         a1-->a2
+         end
+         subgraph two
+         b1-->b2
+         end
+         subgraph three
+         c1-->c2
+         end
+         c1-->a2
+`
+
+const graphs = [graphA, graphB, graphC]
+
 export default {
   data() {
     return {
       renderComponent: true,
-      graphData: graphA,
-      graphName: "A",
-      graphA: graphA,
-      graphB: graphB
+      idx: 0,
+      graphData: graphs[0],
+      graphs: graphs,
     }
   },
   components: {
@@ -79,13 +94,11 @@ export default {
   },
   methods: {
     change() {
-      if (this.graphName == "A") {
-        this.graphData = this.graphB
-        this.graphName = "B"
-      } else {
-        this.graphData = this.graphA
-        this.graphName = "A"
+      this.idx += 1
+      if (this.idx > this.graphs.length) {
+        this.idx = 0
       }
+      this.graphData = this.graphs[this.idx]
     },
     // https://michaelnthiessen.com/force-re-render/
     forceRerender() {

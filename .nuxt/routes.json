@@ -3,7 +3,6 @@
     "name": "index",
     "path": "/",
     "component": "/Users/alexskwong/Desktop/Github/nuxt_tutorial/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_765e65ce"
+    "chunkName": "pages/index"
   }
 ]
