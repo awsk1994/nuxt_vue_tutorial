@@ -4,7 +4,6 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _18519a1f = () => interopDefault(import('../pages/Mermaid.js' /* webpackChunkName: "pages/Mermaid" */))
 const _765e65ce = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -19,10 +18,6 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/Mermaid",
-    component: _18519a1f,
-    name: "Mermaid"
-  }, {
     path: "/",
     component: _765e65ce,
     name: "index"

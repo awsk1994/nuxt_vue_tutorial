@@ -1,12 +1,5 @@
 [
   {
-    "name": "Mermaid",
-    "path": "/Mermaid",
-    "component": "/Users/alexskwong/Desktop/Github/nuxt_tutorial/pages/Mermaid.js",
-    "chunkName": "pages/Mermaid",
-    "_name": "_18519a1f"
-  },
-  {
     "name": "index",
     "path": "/",
     "component": "/Users/alexskwong/Desktop/Github/nuxt_tutorial/pages/index.vue",

@@ -7,6 +7,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="22AItg9eoV6rj036xuQ0Cg0LpJX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,8 +30,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/pages" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -35,7 +42,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639274180166</updated>
-      <workItem from="1639274181223" duration="3328000" />
+      <workItem from="1639274181223" duration="4168000" />
     </task>
     <servers />
   </component>
@@ -43,6 +50,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="145" y="123" width="1547" height="897" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1639277910186">
+      <screen x="45" y="23" width="1747" height="1097" />
+    </state>
+    <state x="145" y="123" width="1547" height="897" key="com.intellij.history.integration.ui.views.FileHistoryDialog/45.23.1747.1097@45.23.1747.1097" timestamp="1639277910186" />
     <state x="616" y="326" width="604" height="490" key="find.popup" timestamp="1639276738088">
       <screen x="45" y="23" width="1747" height="1097" />
     </state>
