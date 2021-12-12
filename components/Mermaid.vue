@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <h1>t1</h1>
-    <vue-mermaid-string :value="diagram" />
+    <button @click="change(); forceRerender()">Change</button>
+    <vue-mermaid-string :value="graphData" v-if="renderComponent" />
   </div>
 </template>
 
@@ -65,11 +65,33 @@ const graphB = endent`
     `
 
 export default {
-  computed: {
-    diagram: () => graphB,
+  data() {
+    return {
+      renderComponent: true,
+      graphData: graphA,
+      graphName: "A",
+      graphA: graphA,
+      graphB: graphB
+    }
   },
   components: {
     VueMermaidString,
+  },
+  methods: {
+    change() {
+      if (this.graphName == "A") {
+        this.graphData = this.graphB
+        this.graphName = "B"
+      } else {
+        this.graphData = this.graphA
+        this.graphName = "A"
+      }
+    },
+    // https://michaelnthiessen.com/force-re-render/
+    forceRerender() {
+      this.renderComponent = false;
+      this.$nextTick(() => this.renderComponent = true)
+    }
   }
 };
 </script>
