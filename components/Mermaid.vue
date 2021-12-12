@@ -31,9 +31,7 @@ const style = (node, colorIndex) => {
   return `style ${node} fill: ${fill}, stroke: ${stroke}`;
 };
 
-export default {
-  computed: {
-    diagram: () => endent`
+const graphA = endent`
       graph TD
         DateTime[Date and time]
         ${style("Frameworks", 0)}
@@ -54,7 +52,21 @@ export default {
         DateTime --> date-fns
         3D --> Three.js
         3D --> Babylon.js
-    `,
+    `
+
+const graphB = endent`
+      graph TD
+        DateTime[Date and time]
+        ${style("Frameworks", 0)}
+        ${style("DateTime", 1)}
+        JavaScript --> Frameworks
+        Frameworks --> DateTime
+        DateTime --> 3D
+    `
+
+export default {
+  computed: {
+    diagram: () => graphB,
   },
   components: {
     VueMermaidString,
